@@ -1,0 +1,48 @@
+generated: '2026-07-24'
+method: searched
+source: live probes of Zilch public hosts
+hosts:
+- host: https://www.zilch.com
+  documents:
+  - path: /.well-known/security.txt        # RFC 9116
+    status: 200
+    content_type: text/plain
+    file: zilch-security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html               # WordPress catch-all HTML, not OIDC metadata
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html               # catch-all HTML, not RFC 8414 metadata
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html               # catch-all HTML, no RFC 9727 catalog
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html               # catch-all HTML, no plugin manifest
+    file: null
+- host: https://help.zilch.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain
+    file: zilch-security.txt              # identical to www host
+- host: https://customers.payzilch.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain
+    file: zilch-security.txt              # identical Contact, Expires 23:59Z
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html               # app catch-all, not OIDC metadata
+    file: null
+notes: >-
+  The only real /.well-known/ document Zilch publishes is an RFC 9116
+  security.txt (Contact: mailto:security@zilch.com), served identically across
+  the marketing, help, and customer-app hosts. Its Expires field (2026-06-11)
+  is past as of this probe. No OpenID/OAuth discovery metadata, api-catalog, or
+  ai-plugin manifest exists; those paths return the site's HTML catch-all page.

@@ -1,0 +1,32 @@
+# Zilch
+
+> Zilch is a London-headquartered "buy now, pay later" and ad-subsidised payments network founded in 2018, and one of the UK's most prominent BNPL brands. It is deliberately merchant-agnostic: consumers apply in the Zilch app, receive a virtual and physical Mastercard, and can Pay-in-3, pay over six weeks, or Pay-now-and-earn-cashback anywhere Mastercard is accepted. Zilch reaches merchants over the open Mastercard card rails and relies on partners (Mastercard for issuing, Checkout.com for processing), so it does not operate a public merchant-integration or developer platform. As of this profile Zilch publishes no developer portal, API reference, or OpenAPI specification.
+
+## Consumer
+
+- [Zilch UK](https://www.zilch.com/uk/): Consumer marketing site and product overview.
+- [Sign up / Apply](https://customers.payzilch.com/apply/): Apply for a Zilch account in the customer app.
+- [Login](https://customers.payzilch.com/login/): Existing-customer login.
+- [Help Centre](https://help.zilch.com/en/): Customer support knowledge base.
+
+## Merchants
+
+- [For Retailers](https://www.zilch.com/uk/retailers/): Merchant/retailer information (marketing, not a developer integration).
+
+## Company
+
+- [The Green (Blog)](https://www.zilch.com/uk/thegreen/): Zilch blog.
+- [Corporate News](https://www.zilch.com/corporate/news/): Press and company news.
+- [Compliance](https://www.zilch.com/uk/compliance/): Regulatory and compliance information.
+- [Terms of Service](https://www.zilch.com/uk/terms-of-service/): Consumer terms.
+- [Privacy Notice](https://www.zilch.com/uk/privacy-notice/): Privacy policy.
+
+## Security
+
+- [security.txt](https://www.zilch.com/.well-known/security.txt): RFC 9116 disclosure contact (security@zilch.com).
+
+## Notes
+
+Zilch exposes no public OpenAPI, GraphQL, MCP, or webhook surface. This llms.txt
+is generated from the verified public web properties recorded in the API
+Evangelist catalog; there is no machine-readable API contract to link.

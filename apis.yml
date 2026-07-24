@@ -31,7 +31,7 @@ tags:
 - Mastercard
 - Fintech
 created: '2026-07-24'
-modified: '2026-07-24'
+modified: '2026-07-24T18:00:00Z'
 specificationVersion: '0.19'
 apis: []
 common:
@@ -55,6 +55,18 @@ common:
   url: https://www.zilch.com/uk/terms-of-service/
 - type: PrivacyPolicy
   url: https://www.zilch.com/uk/privacy-notice/
+- type: SecurityTxt
+  url: well-known/zilch-security.txt
+- type: WellKnown
+  url: well-known/zilch-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/zilch-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.zilch.com/.well-known/security.txt
+- type: DomainSecurity
+  url: security/zilch-domain-security.yml
+- type: LLMsTxt
+  url: llms/zilch-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

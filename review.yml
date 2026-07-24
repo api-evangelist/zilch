@@ -1,0 +1,131 @@
+aid: zilch
+name: Zilch
+review:
+  question: Does Zilch expose a public developer API, developer portal, or downloadable OpenAPI/Swagger?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: United Kingdom
+  tier: bnpl
+findings:
+  summary: >-
+    Zilch is a consumer-facing, merchant-agnostic buy-now-pay-later brand in the
+    United Kingdom. It issues a virtual/physical Mastercard through the Zilch
+    mobile app and reaches merchants over the open Mastercard card rails rather
+    than through a per-merchant checkout integration, so it does not publish a
+    public merchant or developer API. Extensive probing of developer, docs, and
+    api subdomains and paths found no developer portal, no API reference, and no
+    machine-readable OpenAPI/Swagger specification. Card issuing is provided via
+    Mastercard, and payment processing (notably in the US) is provided by
+    Checkout.com; those are Zilch's partners' APIs, not Zilch's own public API.
+    The only public surfaces are a consumer marketing site, a help centre, and a
+    customer sign-up/login application. Zero OpenAPI specifications were
+    harvested. Recorded as a built-stub: identity captured, no public self-serve
+    API.
+  homeMarket: United Kingdom
+  developerPortal:
+    url: ""
+    confirmed: false
+    note: >-
+      No developer portal exists. developer.zilch.com, docs.zilch.com,
+      api.zilch.com, developer.payzilch.com, docs.payzilch.com, partners./
+      merchant./business./status.zilch.com all fail to resolve (curl exit /
+      HTTP 000, no DNS). On-site paths /uk/developers/, /uk/api/, /developers,
+      /docs, /api either 403 (bot protection on the apex) or silently redirect
+      back to the consumer homepage (HTTP 200 at www.zilch.com/uk/).
+  downloadableSpecs:
+    count: 0
+    note: >-
+      No OpenAPI/Swagger found. api.payzilch.com/openapi.json and /swagger.json
+      return HTTP 403 (edge bot-protection, not a spec). zilch.com/.well-known/
+      openid-configuration returns an nginx 301 stub (not an OIDC document).
+      customers.payzilch.com/.well-known/openid-configuration returns the
+      consumer app HTML SPA (AppsFlyer/device-fingerprint scripts), not a valid
+      OIDC discovery document. www.zilch.com/llms.txt returns HTTP 200 with an
+      empty body.
+  authModel: >-
+    No public API auth scheme is documented. The consumer application at
+    customers.payzilch.com uses a first-party web/app login (device
+    fingerprinting present); there is no documented API key, OAuth2
+    client-credentials, OAuth2 authorization-code, or mTLS/FAPI developer
+    surface.
+  webhooksEvents:
+    documented: false
+    note: No public webhook or event catalogue and no AsyncAPI are published.
+  postman:
+    present: false
+    note: No public Postman collection or workspace located.
+  graphql:
+    present: false
+  githubOrganization:
+    note: >-
+      github.com/zilch exists but is an UNRELATED coding-education organisation
+      ("Hello! Time to level up your coding skills.", blog zilch.dev, verified
+      2021), not the Zilch fintech. github.com/payzilch returns HTTP 404. No
+      GitHub organisation is attributable to the Zilch payments company.
+  railsPosture: >-
+    Zilch is not a scheme operator or rail; it is a card-issuing BNPL that rides
+    the Mastercard network. No ISO 20022 or scheme-documentation posture
+    applies. It is downstream of Mastercard (issuing) and Checkout.com
+    (processing), consuming its partners' APIs rather than exposing its own.
+  transports:
+  - protocol: HTTPS
+    scheme: https
+    note: Consumer marketing site and app only; no documented REST/GraphQL/gRPC developer API.
+    documented: false
+  probes:
+  - url: https://zilch.com/
+    status: 403
+    note: Apex returns 403 to non-browser clients (edge bot protection).
+  - url: https://www.zilch.com/uk/
+    status: 200
+    note: Consumer marketing site (UK home market).
+  - url: https://www.zilch.com/us/
+    status: 200
+    note: US consumer marketing site; www.payzilch.com redirects here.
+  - url: https://developer.zilch.com/
+    status: 000
+    note: Does not resolve (no DNS).
+  - url: https://docs.zilch.com/
+    status: 000
+    note: Does not resolve (no DNS).
+  - url: https://api.zilch.com/
+    status: 000
+    note: Does not resolve (no DNS).
+  - url: https://developer.payzilch.com/
+    status: 000
+    note: Does not resolve (no DNS).
+  - url: https://api.payzilch.com/openapi.json
+    status: 403
+    note: Edge bot-protection response, not an OpenAPI document.
+  - url: https://help.zilch.com/en/
+    status: 200
+    note: Consumer help centre (help.payzilch.com redirects here).
+  - url: https://customers.payzilch.com/login/
+    status: 200
+    note: Consumer sign-in application.
+  - url: https://customers.payzilch.com/apply/
+    status: 200
+    note: Consumer application/sign-up flow.
+sources:
+- url: https://www.zilch.com/uk/
+  type: Website
+  note: Company overview, footer link inventory; no developer or API link present.
+- url: https://help.zilch.com/en/
+  type: HelpCenter
+  note: Consumer support only.
+- url: https://apitracker.io/a/payzilch
+  type: Reference
+  note: Third-party tracker; developer-docs and API-reference fields are empty/unpopulated.
+- url: https://www.marqeta.com/blog/zilch
+  type: Reference
+  note: Documents Zilch's US expansion using partner card infrastructure (issuer processing).
+actions:
+  apisListed: 0
+  openapiHarvested: false
+  specsCount: 0
+  status: built-stub
+  reason: >-
+    Zilch publishes no public developer API, portal, or OpenAPI. Only verified
+    consumer web properties were recorded in apis.yml; no API entries were
+    fabricated.

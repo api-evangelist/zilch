@@ -1,0 +1,60 @@
+aid: zilch
+url: https://raw.githubusercontent.com/api-evangelist/zilch/refs/heads/main/apis.yml
+name: Zilch
+kind: company
+description: >-
+  Zilch is a London-headquartered "buy now, pay later" and ad-subsidised
+  payments network founded in 2018, and one of the United Kingdom's most
+  prominent BNPL brands. Rather than integrating at each retailer's checkout,
+  Zilch is deliberately merchant-agnostic: consumers apply in the Zilch mobile
+  app, receive a virtual (and physical) Mastercard, and can Pay-in-3, pay over
+  six weeks, or Pay-now-and-earn-cashback anywhere Mastercard is accepted,
+  online or in-store, through Apple Pay and Google Pay wallets. Because Zilch
+  reaches merchants over the open Mastercard card rails and relies on partners
+  such as Mastercard for card issuing and Checkout.com as its payments
+  processor, it does not operate a public merchant-integration or developer
+  platform the way a PSP or open-banking provider does. As of this review Zilch
+  publishes no developer portal, no API reference, and no downloadable
+  OpenAPI/Swagger specification; its public surface is a consumer marketing
+  site, a help centre, and a customer sign-up/login app. This profile therefore
+  records Zilch's verified public web properties honestly and carries no API
+  entries, because none are publicly documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Payments
+- United Kingdom
+- BNPL
+- Buy Now Pay Later
+- Consumer Credit
+- Digital Wallet
+- Card
+- Mastercard
+- Fintech
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.zilch.com/uk/
+- type: HelpCenter
+  url: https://help.zilch.com/en/
+- type: Blog
+  url: https://www.zilch.com/uk/thegreen/
+- type: News
+  url: https://www.zilch.com/corporate/news/
+- type: Merchants
+  url: https://www.zilch.com/uk/retailers/
+- type: SignUp
+  url: https://customers.payzilch.com/apply/
+- type: Login
+  url: https://customers.payzilch.com/login/
+- type: Compliance
+  url: https://www.zilch.com/uk/compliance/
+- type: TermsOfService
+  url: https://www.zilch.com/uk/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.zilch.com/uk/privacy-notice/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -46,6 +46,15 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.j
 tags:
 - Payments
 - United Kingdom
+- Buy Now Pay Later
+- Consumer Credit
+- Digital Wallet
+- Card
+- Mastercard
+- Fintech
+tags_raw:
+- Payments
+- United Kingdom
 - BNPL
 - Buy Now Pay Later
 - Consumer Credit

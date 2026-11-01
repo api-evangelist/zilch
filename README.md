@@ -1,4 +1,4 @@
-# Zilch (zilch)
+# Zilch
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,51 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Zilch is a London-headquartered "buy now, pay later" and ad-subsidised payments network founded in 2018, and one of the United Kingdom's most prominent BNPL brands. Rather than integrating at each retailer's checkout, Zilch is deliberately merchant-agnostic: consumers apply in the Zilch mobile app, receive a virtual (and physical) Mastercard, and can Pay-in-3, pay over six weeks, or Pay-now-and-earn-cashback anywhere Mastercard is accepted, online or in-store, via Apple Pay and Google Pay.
+Zilch is a London-headquartered "buy now, pay later" and ad-subsidised payments network founded in 2018, and one of the United Kingdom's most prominent BNPL brands. Rather than integrating at each retailer's checkout, Zilch is deliberately merchant-agnostic: consumers apply in the Zilch mobile app, receive a virtual (and physical) Mastercard, and can Pay-in-3, pay over six weeks, or Pay-now-and-earn-cashback anywhere Mastercard is accepted, online or in-store, through Apple Pay and Google Pay wallets. Because Zilch reaches merchants over the open Mastercard card rails and relies on partners such as Mastercard for card issuing and Checkout.com as its payments processor, it does not operate a public merchant-integration or developer platform the way a PSP or open-banking provider does. As of this review Zilch publishes no developer portal, no API reference, and no downloadable OpenAPI/Swagger specification; its public surface is a consumer marketing site, a help centre, and a customer sign-up/login app. This profile therefore records Zilch's verified public web properties honestly and carries no API entries, because none are publicly documented.
 
-Because Zilch reaches merchants over the open Mastercard card rails — with Mastercard for card issuing and Checkout.com as its payments processor — it does not run a public merchant-integration or developer platform the way a PSP or open-banking provider does. As of this review it publishes **no developer portal, no API reference, and no downloadable OpenAPI/Swagger specification**. This profile records Zilch's verified public web properties honestly and carries no API entries, because none are publicly documented.
+**Areas:** Payments · United Kingdom · Buy Now Pay Later · Consumer Credit · Digital Wallet · Cards · Mastercard · Fintech
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/zilch/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/zilch/refs/heads/main/apis.yml)
+## Zilch on APIs.io
 
-## Home Market
+Everything profiled for Zilch is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/zilch/](https://apis.io/providers/zilch/)** — or go straight to one of the APIs or properties below.
 
-United Kingdom
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Payments
-- United Kingdom
-- BNPL
-- Buy Now Pay Later
-- Consumer Credit
-- Digital Wallet
-- Card
-- Mastercard
-- Fintech
+#### Security (2)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+- [Zilch Domain Security](https://apis.io/security/zilch/zilch-domain-security/)
+- [Zilch Vulnerability Disclosure](https://apis.io/security/zilch/zilch-vulnerability-disclosure/)
 
-## APIs
+## Where to find this API
 
-Zilch exposes **no public, documented API**. It is a consumer-facing, merchant-agnostic BNPL card product that operates over the Mastercard network; card issuing is provided by Mastercard and payment processing by Checkout.com. No developer portal, API reference, OpenAPI/Swagger, webhooks catalogue, Postman collection, or GraphQL surface could be located (see `review.yml` for the full probe log and HTTP statuses).
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.zilch.com/uk/)
-- [Help Center](https://help.zilch.com/en/)
+- [Sign up](https://customers.payzilch.com/apply/)
 - [Blog](https://www.zilch.com/uk/thegreen/)
-- [News](https://www.zilch.com/corporate/news/)
-- [Retailers](https://www.zilch.com/uk/retailers/)
-- [Sign Up](https://customers.payzilch.com/apply/)
-- [Login](https://customers.payzilch.com/login/)
+- [Security](https://www.zilch.com/.well-known/security.txt)
 - [Compliance](https://www.zilch.com/uk/compliance/)
-- [Terms of Service](https://www.zilch.com/uk/terms-of-service/)
-- [Privacy Notice](https://www.zilch.com/uk/privacy-notice/)
+- [Terms of service](https://www.zilch.com/uk/terms-of-service/)
+- [Privacy policy](https://www.zilch.com/uk/privacy-notice/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.9** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/zilch/](https://apis.io/providers/zilch/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Zilch: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/zilch/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
